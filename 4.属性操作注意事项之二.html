@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*#p1{*/
+            /*border:1px solid red;*/
+            /*width:300px;*/
+        /*}*/
+        .red{
+            border:10px solid #f1f1f1;
+            background:red;
+            width:300px;
+            color:yellow;
+        }
+        .yellow{
+            border:10px solid #f1f1f1;
+            background:yellow;
+            width:400px;
+            color:red;
+        }
+    </style>
+
+    <script>
+        window.onload=function(){
+            var btn1=document.getElementById('btn1');
+            var btn2=document.getElementById('btn2');
+            var btn3=document.getElementById('btn3');
+            var btn4=document.getElementById('btn4');
+            var p1=document.getElementById('p1');
+            var num=15;
+            btn1.onclick=function () {
+                num-=2;
+                p1.style.fontSize=num+'px';
+            }
+
+            btn2.onclick=function () {
+                num+=2;
+                p1.style.fontSize=num+'px';
+            }
+
+            btn3.onclick=function () {
+                p1.className='red';
+            }
+
+            btn4.onclick=function () {
+                p1.className='yellow';
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="-">
+<input id="btn2" type="button" value="+">
+<input id="btn3" type="button" value="红">
+<input id="btn4" type="button" value="黄">
+<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aut distinctio eius eveniet exercitationem impedit l
+    aborum natus nemo nulla porro repudiandae similique veniam, voluptas? Error inventore qui tenetur unde voluptatibus!</p>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #p1{
+            border:1px solid red;
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+<input id="btn1" type="button" value="-">
+<input id="btn2" type="button" value="+">
+<p id="p1" style="font-size:15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aut distinctio eius eveniet exercitationem impedit l
+    aborum natus nemo nulla porro repudiandae similique veniam, voluptas? Error inventore qui tenetur unde voluptatibus!</p>
+
+通关口令: <input type="text" id="text1">
+<input id="btn4" type="button" value="验证">
+
+
+<br>
+<br>
+<br>
+<br>
+
+<img src="img/1.jpg" alt="" id="img">
+
+
+
+<script>
+    var img=document.getElementById('img');
+    var onOff=true;
+    img.onclick=function(){
+        if(onOff){
+            img.src='img/2.jpg';
+            onOff=false;
+        }
+        else{
+            img.src='img/1.jpg';
+            onOff=true;
+        }
+    }
+    window.onload=function(){
+        var btn1=document.getElementById('btn1');
+        var btn2=document.getElementById('btn2');
+        var p1=document.getElementById('p1');
+        var num=15;
+        btn1.onclick=function () {
+            if(num>12){
+                num-=2;
+                p1.style.fontSize=num+'px';
+            }
+        }
+
+        btn2.onclick=function () {
+            if(num<22){
+                num+=2;
+                p1.style.fontSize=num+'px';
+            }
+        }
+
+        var text1=document.getElementById('text1');
+        var btn4=document.getElementById('btn4');
+
+        btn4.onclick=function(){
+            if(text1.value==''){
+                alert('亲,写点什么吧');
+            }
+            else if(text1.value=='CSS'){
+                alert('亲,通过');
+            }
+            else if(text1.value=='JS'){
+                alert('亲,通过');
+            }
+            else if(text1.value=='JQ'){
+                alert('亲,通过');
+            }
+            else if(text1.value=='LESS'){
+                alert('亲,通过');
+            }
+            else if(text1.value=='HTML'){
+                alert('亲,通过');
+            }
+            else{
+                alert('你输入的是:'+text1.value+'不能通过');
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background:#f1f1f1;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.onload=function(){
+            var div1 = document.getElementById('div1');
+            var span1 = document.getElementById('span1');
+            var text1 = document.getElementById('text1');
+            var btn1 = document.getElementById('btn1');
+
+            btn1.onclick=function(){
+                if(text1.value!=''){
+                    div1.innerHTML+= span1.innerHTML+text1.value+"<br/>";
+                    text1.value='';
+                }
+                else{
+                    alert('请输入内容');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<span id="span1">妙味:</span>
+<input type="text" id="text1">
+<input type="button" id="btn1" value="发送">
+</body>
+</html>

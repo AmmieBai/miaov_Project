@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js属性操作</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oBtn1 = document.getElementById('btn1');
+			var oText1 = document.getElementById('text1');
+			var oSelect1 = document.getElementById('select1');
+			var oImg = document.getElementById('img1');
+			var oP = document.getElementById('p1');
+//			属性读操作和写操作
+			oBtn1.onclick=function(){
+//				alert(oBtn1.value);
+//				alert(oText1.value);
+//				alert(oSelect1.value);
+//				alert(oText1.value+'在'+oSelect1.value);
+//				oBtn1.value='提交';
+//				oText1.value=oBtn1.value;
+//				oText1.value=oSelect1.value;
+//				oImg.src = oText1.value;
+//				alert(oP.innerHTML);
+//				oP.innerHTML = '你好啊,嘉乐,我是小白';
+				oP.innerHTML = oText1.value;
+			}
+		}
+	</script>
+</head>
+<body>
+<input type="text" id="text1">
+<select name="" id="select1">
+	<option type="text" value="上海">上海</option>
+	<option type="text" value="北京">北京</option>
+	<option type="text" value="杭州">杭州</option>
+</select>
+<input type="button" name="button" id="btn1" value="按钮">
+<!--<img src="img/1.jpg" alt="这是一张图片"　width="20px" id="img1">-->
+
+<p id="p1">这是一段文字……</p>
+</body>
+</html>

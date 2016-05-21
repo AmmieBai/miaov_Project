@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .left{
+            float:left;
+        }
+        .right{
+            float:right;
+        }
+        #div1{
+            width:300px;
+            height:300px;
+            border:1px solid red;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            var img1 = document.getElementById('img1');
+            var btn1 = document.getElementById('btn1');
+            var ceshi = document.getElementById('ceshi');
+
+            btn1.onclick = function(){
+                alert(img1.src);
+            }
+            ceshi.onclick=function () {
+                ceshi.type='checkbox';
+            }
+
+
+
+
+            var attr=document.getElementById('attr');
+            var val=document.getElementById('val');
+            var btn=document.getElementById('btn');
+            var div1=document.getElementById('div1');
+
+            btn.onclick=function(){
+                div1.style[attr.value]=val.value;
+            }
+        }
+    </script>
+</head>
+<body>
+<img src="img/2.jpg" id="img1" alt="">
+<input type="button" value="提交" id="btn1">
+<input type="text" value="测试" id="ceshi">
+<br>
+<br>
+<br>
+<br>
+请输入属性名称:<input type="text" id="attr"/><br>
+请输入属性值:<input type="text" id="val">
+<input type="button" value="确定" id="btn">
+<div id="div1"></div>
+</body>
+</html>
